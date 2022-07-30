@@ -10,11 +10,11 @@ export default function allUsers(props) {
             <Card.Body>
               <Card.Title>{user.name}</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">
-                {user.email}
+                {user.phone}
               </Card.Subtitle>
-              <Card.Text>{user.gen}</Card.Text>
-              <Card.Link href="#">Card Link</Card.Link>
-              <Card.Link href="#">Another Link</Card.Link>
+              <Card.Text>{user.location}</Card.Text>
+              <Card.Link href="#">Edit Profile</Card.Link>
+              <Card.Link href="#">Delete Profile</Card.Link>
             </Card.Body>
           </Card>
         );

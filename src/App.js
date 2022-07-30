@@ -9,26 +9,26 @@ function App() {
   const [user, setUser] = useState([
     {
       name: "Zidan",
-      email: "zidan.com",
-      gen: 21,
+      phone: "0245339920",
+      location: "Madina",
     },
 
     {
       name: "Kareem",
-      email: "kareem.com",
-      gen: 22,
+      phone: "050337728",
+      location: "Airport City",
     },
 
     {
       name: "Salah",
-      email: "salah.com",
-      gen: 28,
+      phone: "027229927",
+      location: "Osu",
     },
   ]);
   const AddNewUser = (users) => {
     setUser([
       ...user,
-      { name: users.name, email: users.email, gen: users.gen },
+      { name: users.name, phone: users.phone, location: users.location },
     ]);
   };
 

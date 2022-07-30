@@ -4,12 +4,12 @@ import Form from "react-bootstrap/Form";
 
 export default function addUserForm(props) {
   const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [gen, setGen] = useState("");
+  const [phone, setPhone] = useState("");
+  const [location, setLocation] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.retrieve({ name, email, gen });
+    props.retrieve({ name, phone, location });
   };
   return (
     <div>
@@ -29,28 +29,28 @@ export default function addUserForm(props) {
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
+          <Form.Label>Phone</Form.Label>
           <Form.Control
             type="email"
-            placeholder="Enter email"
-            value={email}
-            name="email"
+            placeholder="Enter Phone number"
+            value={phone}
+            name="number"
             onChange={(e) => {
-              setEmail(e.target.value);
+              setPhone(e.target.value);
             }}
           />
           <Form.Text className="text-muted"></Form.Text>
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Gen</Form.Label>
+          <Form.Label>Location</Form.Label>
           <Form.Control
             type="number"
-            placeholder="Enter Gen"
-            name="gen"
-            value={gen}
+            placeholder="Enter Location"
+            name="name"
+            value={location}
             onChange={(e) => {
-              setGen(e.target.value);
+              setLocation(e.target.value);
             }}
           />
           <Form.Text className="text-muted"></Form.Text>
